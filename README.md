@@ -1,4 +1,4 @@
-# Choose-Toilet [![Youtube Video]](https://www.youtube.com/watch?v=XIOoCKO-ybQ)
+# Choose-Toilet [Youtube Video](https://www.youtube.com/watch?v=XIOoCKO-ybQ)
 Mathematical problem simulation
 
 Unconstrained function minimization in javascript.
