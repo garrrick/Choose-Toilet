@@ -1,0 +1,40 @@
+rm(list = ls())
+# simulation times
+sim.times <- 10000
+# number of toilets
+nt <- 300
+# cleanness rank of toilet
+tp <- replicate(sim.times, sample(nt))
+# probability of choosing the most clean toilet
+gbt <- matrix(0, nr = sim.times, nc = nt-1)
+for (ii in 1:(nt-1)) {
+  check <- tp[1:ii,,drop = FALSE]
+  g <- c()
+  for (kk in (ii+1):nt) {
+    tpk <- matrix(tp[kk,], nc = ncol(check), nr = nrow(check), byrow = TRUE)
+    g <- rbind(g, colSums(tpk > check) == nrow(check))
+  }
+  temp <- g*tp[(ii+1):nt,,drop = FALSE]
+  gbt[,ii] <- apply(temp, 2, function(x){y <- x[min(which(x != 0))]; y[is.na(y)] <- 0; return(y)})
+}
+ps <- colMeans(gbt == nt)
+highest.ps <- ps[ps == max(ps)]
+highest.ps
+# look k-th toilet
+locat <- (1:nt)[ps == max(ps)]
+locat
+# percentage
+p.locat <- (1:nt)[ps == max(ps)]/nt
+p.locat
+# plot
+plot((1:(nt-1))/nt, ps, type = 'l', lwd = 2,
+     xlab = 'toilet quantile', 
+     ylab = 'probability of choosing the best toilet')
+points(p.locat, highest.ps, col = 'blue', lwd = 5)
+xx <- (1:nt)/nt
+yy <- c()
+for (ii in 1:length(xx)){
+  yy[ii] <- -xx[ii]*log(xx[ii])
+}
+lines(xx, yy, lty = 2, lwd = 2)
+points(1/exp(1), -(1/exp(1))*log(1/exp(1)), col = 'red', lwd = 5)
