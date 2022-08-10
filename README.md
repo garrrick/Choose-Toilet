@@ -9,5 +9,4 @@ How to choose the best (most clean) toilet when there are lots of toilets during
 # R Simulation
 
 Demo scenario: 300 toilets to choose, 10000 simulations
-
 ![best_toilet_percentile](https://user-images.githubusercontent.com/25848324/183864236-bcebc781-42a8-42ec-a67a-471283b6ad19.png)
