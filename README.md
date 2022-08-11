@@ -1,12 +1,12 @@
 # Choose-Toilet 
 
-It is an introduction of an interesting mathematical problem.
+How to choose the best (most clean) toilet when there are lots of (e.g. 300) toilets during a festival?
 
-This is just a practice for me to get familiar with Github, For better understanding, you can watch this [Youtube Video](https://www.youtube.com/watch?v=XIOoCKO-ybQ).
+Short answer: choose the toilet at 36.8% of all toilets, you will have the highest probability 0.368 to get the best toilet.
 
-How to choose the best (most clean) toilet when there are lots of toilets during a festival?
+This is just a practice for me to get familiar with Github, For better understanding, please watch this [Youtube Video](https://www.youtube.com/watch?v=XIOoCKO-ybQ).
 
 # R Simulation
 
 Demo scenario: 300 toilets to choose, 10000 simulations
-![best_toilet_percentile](https://user-images.githubusercontent.com/25848324/183864236-bcebc781-42a8-42ec-a67a-471283b6ad19.png)
+![best_toilet_choosing](https://user-images.githubusercontent.com/25848324/184058808-a786790b-d8b5-4f1a-aa8d-a1b2e1f3074d.png)
